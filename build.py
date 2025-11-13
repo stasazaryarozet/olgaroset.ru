@@ -9,8 +9,8 @@ with open('content.md', 'r', encoding='utf-8') as f:
     content = f.read()
 
 # Извлекаем версию
-version_match = re.search(r'version:\s*([\d.]+)', content)
-version = version_match.group(1) if version_match else '1.0'
+version_match = re.search(r'version:\s*(.+)', content)
+version = version_match.group(1).strip() if version_match else '1.0'
 
 # Удаляем frontmatter
 content = re.sub(r'^---.*?---\n', '', content, flags=re.DOTALL)
