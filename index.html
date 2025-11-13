@@ -41,6 +41,14 @@ strong{font-weight:500}
 hr{border:0;height:1px;background:var(--border);margin:2.5em 0}
 main{min-height:50vh;opacity:0;animation:show .3s ease forwards}
 @keyframes show{to{opacity:1}}
+#v{
+  position:fixed;
+  bottom:12px;
+  right:12px;
+  font-size:11px;
+  color:#999;
+  font-variant-numeric:tabular-nums
+}
 @media(prefers-reduced-motion:reduce){*{animation:none!important}}
 @media(max-width:600px){
   html{font-size:17px}
@@ -50,11 +58,16 @@ main{min-height:50vh;opacity:0;animation:show .3s ease forwards}
 </head>
 <body>
 <main id="c"></main>
+<div id="v"></div>
 <script src="https://cdn.jsdelivr.net/npm/marked@11/marked.min.js"></script>
 <script>
 fetch('content.md')
   .then(r=>r.text())
-  .then(t=>c.innerHTML=marked.parse(t))
+  .then(t=>{
+    var match=t.match(/version:\s*([\d.]+)/);
+    if(match)v.textContent='v'+match[1];
+    c.innerHTML=marked.parse(t.replace(/---[\s\S]*?---\n/,''));
+  })
   .catch(()=>c.innerHTML='<p><a href="mailto:o.g.rozet@gmail.com">o.g.rozet@gmail.com</a>');
 </script>
 </body>
