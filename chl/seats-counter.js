@@ -171,12 +171,8 @@ function showRegistrationForm() {
         placeholder="Имя">
       
       <input type="email" name="email" required 
-        style="width: 100%; padding: 0.875rem; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; margin-bottom: 0.75rem;"
-        placeholder="Email">
-      
-      <input type="tel" name="phone" required 
         style="width: 100%; padding: 0.875rem; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; margin-bottom: 1.25rem;"
-        placeholder="Телефон">
+        placeholder="Email">
       
       <button type="submit" style="width: 100%; padding: 1rem; background: var(--accent); color: white; border: none; border-radius: 4px; font-size: 1rem; font-weight: 500; cursor: pointer; margin-bottom: 0.75rem;">
         Отправить
@@ -190,11 +186,14 @@ function showRegistrationForm() {
     <div id="form-success" style="display: none; text-align: center; padding: 1rem 0;">
       <h3 style="color: var(--accent); margin-bottom: 1rem; font-size: 1.2rem;">Готово</h3>
       
-      <p style="color: var(--text-muted); margin-bottom: 1rem; font-size: 0.95rem;">
-        Реквизиты отправлены на email
+      <p style="color: var(--text-muted); margin-bottom: 0.5rem; font-size: 0.95rem;">
+        Карта Сбербанк<br>
+        <strong style="font-size:1.1rem;color:var(--text)">5559 5720 5319 4603</strong><br>
+        Ольга Григорьевна Розет<br>
+        <strong>5 000 ₽</strong>
       </p>
       
-      <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1rem;">
+      <p style="color: var(--text-muted); font-size: 0.85rem; margin:1rem 0;">
         Вопросы: <a href="https://t.me/olgarozet" style="color: var(--accent);">@olgarozet</a>
       </p>
       
@@ -222,7 +221,6 @@ function showRegistrationForm() {
     const data = {
       name: formData.get('name'),
       email: formData.get('email'),
-      phone: formData.get('phone'),
       event: 'Встреча ЦДЛ — Человек и Ремесло. Всегда и Сейчас.',
       date: '2 декабря 2025, 12:00'
     };
