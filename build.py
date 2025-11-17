@@ -80,7 +80,8 @@ html = f'''<!DOCTYPE html>
 :root{{--text:#1a1a1a;--bg:#fff;--link:#000;--border:#e0e0e0;--focus:#0066cc}}
 *{{margin:0;padding:0;box-sizing:border-box}}
 html{{font:400 18px/1.7 -apple-system,BlinkMacSystemFont,system-ui,sans-serif;-webkit-text-size-adjust:100%;-webkit-font-smoothing:antialiased}}
-body{{color:var(--text);background:var(--bg);max-width:38em;margin:0 auto;padding:4em 1.5em 8em}}
+body{{color:var(--text);background:var(--bg);max-width:38em;margin:0 auto;padding:4em 1.5em 2em;min-height:100vh;display:flex;flex-direction:column}}
+main{{flex:1}}
 h1{{font-size:1.8em;font-weight:400;margin-bottom:0.2em;letter-spacing:-0.01em}}
 h2{{font-size:1.1em;font-weight:500;margin:3em 0 1em;padding-top:2em;border-top:1px solid var(--border)}}
 p{{margin:0.8em 0}}
@@ -88,14 +89,24 @@ a{{color:var(--link);text-decoration:none;border-bottom:1px solid currentColor;t
 a:hover{{opacity:0.6}}
 a:focus-visible{{outline:2px solid var(--focus);outline-offset:2px}}
 strong{{font-weight:500}}
-hr{{border:0;height:1px;background:var(--border);margin:2.5em 0}}
+footer{{margin-top:4em;padding-top:2em;border-top:1px solid var(--border);font-size:0.9em;color:#666}}
+footer a{{color:#666;border-bottom-color:#ccc}}
 #v{{position:fixed;bottom:12px;right:12px;font-size:11px;color:#999;font-variant-numeric:tabular-nums}}
 @media(prefers-reduced-motion:reduce){{*{{animation:none!important}}}}
-@media(max-width:600px){{html{{font-size:17px}}body{{padding:3em 1.2em 6em}}}}
+@media(max-width:600px){{html{{font-size:17px}}body{{padding:3em 1.2em 2em}}}}
 </style>
 </head>
 <body>
+<main>
 {html_content}
+</main>
+<footer>
+<p>
+<a href="https://t.me/olgarozet">@olgarozet</a><br>
+<a href="https://www.instagram.com/olga_rozet/">@olga_rozet</a><br>
+o.g.rozet@gmail.com
+</p>
+</footer>
 <div id="v">v{version}</div>
 </body>
 </html>'''
