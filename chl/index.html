@@ -23,8 +23,10 @@ a:hover{opacity:0.6}
 .cta{display:block;width:100%;padding:1em;background:var(--accent);color:white;border:none;border-radius:4px;font-size:1em;font-weight:500;cursor:pointer;margin-bottom:1.5em}
 .cta:hover{background:#c41717}
 .cta:disabled{background:#999;cursor:not-allowed}
-footer{margin-top:4em;padding-top:2em;border-top:1px solid var(--border);font-size:0.9em;color:#666}
-footer a{color:#666;border-bottom-color:#ccc}
+footer{margin-top:4em;padding-top:2em;border-top:1px solid var(--border);font-size:1em;color:var(--text)}
+footer a{color:var(--text);border-bottom-color:var(--border)}
+footer p{line-height:2}
+.external-link::after{content:"↗";font-size:0.7em;margin-left:0.2em;opacity:0.5}
 .breadcrumbs{font-size:0.9em;margin-bottom:2em;color:#999}
 .breadcrumbs a{color:#999;border-bottom-color:#ddd}
 @media(max-width:600px){html{font-size:17px}body{padding:3em 1.2em 2em}.price{font-size:2em}}
@@ -42,7 +44,7 @@ footer a{color:#666;border-bottom-color:#ccc}
 <div class="info">
   <p><strong>Дата:</strong> 2 декабря 2025</p>
   <p><strong>Время:</strong> 12:00</p>
-  <p><strong>Место:</strong> <a href="https://ru.wikipedia.org/wiki/Центральный_дом_литераторов">ЦДЛ</a>, Поварская 50/53</p>
+  <p><strong>Место:</strong> <a href="https://ru.wikipedia.org/wiki/Центральный_дом_литераторов" class="external-link">ЦДЛ</a>, Поварская 50/53</p>
 </div>
 
 <p style="text-align:center"><a href="event.ics" download>+ Добавить в календарь</a></p>
@@ -59,9 +61,13 @@ footer a{color:#666;border-bottom-color:#ccc}
 
 <footer>
 <p>
-<a href="https://t.me/olgarozet">@olgarozet</a><br>
-<a href="https://www.instagram.com/olga_rozet/">@olga_rozet</a><br>
-o.g.rozet@gmail.com
+<strong>Контакты</strong><br>
+Telegram: <a href="https://t.me/olgarozet">@olgarozet</a><br>
+Instagram: <a href="https://www.instagram.com/olga_rozet/">@olga_rozet</a><br>
+Email: <a href="mailto:o.g.rozet@gmail.com">o.g.rozet@gmail.com</a>
+</p>
+<p style="margin-top:1.5em">
+<a href="/">← На главную</a>
 </p>
 </footer>
 
