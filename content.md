@@ -15,7 +15,7 @@ version: l
 ## Ближайшее
 
 Встреча 2 декабря  
-[olgaroset.ru/chl](chl/)
+<a href="chl/">olgaroset.ru/chl</a>
 
 Париж 16-19 января  
-[parisinjanuary.ru](https://parisinjanuary.ru)
+<a href="https://parisinjanuary.ru">parisinjanuary.ru</a>
