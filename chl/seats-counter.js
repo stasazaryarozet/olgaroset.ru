@@ -156,65 +156,52 @@ function showRegistrationForm() {
   const form = document.createElement('div');
   form.style.cssText = `
     background: white;
-    padding: 2rem;
-    border-radius: 8px;
-    max-width: 500px;
+    padding: 2.5rem;
+    border-radius: 4px;
+    max-width: 400px;
     width: 100%;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
   `;
   
   form.innerHTML = `
-    <h2 style="font-family: var(--font-display); font-size: 1.8rem; margin-bottom: 1rem;">Регистрация на встречу</h2>
-    <p style="color: var(--text-muted); margin-bottom: 1.5rem;">После отправки вы получите реквизиты для оплаты</p>
+    <h2 style="font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 1.5rem; text-align: center;">Регистрация</h2>
     
     <form id="registration-form">
-      <div style="margin-bottom: 1rem;">
-        <label style="display: block; margin-bottom: 0.25rem; font-weight: 600;">Имя *</label>
-        <input type="text" name="name" required 
-          style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem;"
-          placeholder="Ваше имя">
-      </div>
+      <input type="text" name="name" required 
+        style="width: 100%; padding: 0.875rem; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; margin-bottom: 0.75rem;"
+        placeholder="Имя">
       
-      <div style="margin-bottom: 1rem;">
-        <label style="display: block; margin-bottom: 0.25rem; font-weight: 600;">Email *</label>
-        <input type="email" name="email" required 
-          style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem;"
-          placeholder="your@email.com">
-      </div>
+      <input type="email" name="email" required 
+        style="width: 100%; padding: 0.875rem; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; margin-bottom: 0.75rem;"
+        placeholder="Email">
       
-      <div style="margin-bottom: 1.5rem;">
-        <label style="display: block; margin-bottom: 0.25rem; font-weight: 600;">Телефон *</label>
-        <input type="tel" name="phone" required 
-          style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem;"
-          placeholder="+7 XXX XXX XX XX">
-      </div>
+      <input type="tel" name="phone" required 
+        style="width: 100%; padding: 0.875rem; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; margin-bottom: 1.25rem;"
+        placeholder="Телефон">
       
-      <div style="display: flex; gap: 1rem;">
-        <button type="submit" style="flex: 1; padding: 1rem; background: var(--accent); color: white; border: none; border-radius: 4px; font-size: 1rem; font-weight: 600; cursor: pointer;">
-          Отправить заявку
-        </button>
-        <button type="button" id="close-modal" style="padding: 1rem; background: #999; color: white; border: none; border-radius: 4px; font-size: 1rem; cursor: pointer;">
-          Отмена
-        </button>
-      </div>
+      <button type="submit" style="width: 100%; padding: 1rem; background: var(--accent); color: white; border: none; border-radius: 4px; font-size: 1rem; font-weight: 500; cursor: pointer; margin-bottom: 0.75rem;">
+        Отправить
+      </button>
+      
+      <button type="button" id="close-modal" style="width: 100%; padding: 0.75rem; background: transparent; color: #999; border: none; font-size: 0.9rem; cursor: pointer;">
+        Отмена
+      </button>
     </form>
     
-           <div id="form-success" style="display: none; text-align: center; padding: 2rem 0;">
-             <h3 style="color: var(--accent); margin-bottom: 1rem;">✓ Заявка отправлена!</h3>
-             
-             <p style="color: var(--text-muted); margin-bottom: 1rem;">
-               Реквизиты для оплаты отправлены на ваш email.
-             </p>
-             
-             <p style="color: var(--text-muted); font-size: 0.9rem;">
-               Вопросы? Напишите Ольге:<br>
-               <a href="https://t.me/olgarozet" style="color: var(--accent); text-decoration: underline;">Telegram: @olgarozet</a>
-             </p>
-             
-             <button id="close-success" style="margin-top: 1rem; padding: 0.75rem 1.5rem; background: var(--accent); color: white; border: none; border-radius: 4px; cursor: pointer;">
-               Закрыть
-             </button>
-           </div>
+    <div id="form-success" style="display: none; text-align: center; padding: 1rem 0;">
+      <h3 style="color: var(--accent); margin-bottom: 1rem; font-size: 1.2rem;">Готово</h3>
+      
+      <p style="color: var(--text-muted); margin-bottom: 1rem; font-size: 0.95rem;">
+        Реквизиты отправлены на email
+      </p>
+      
+      <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1rem;">
+        Вопросы: <a href="https://t.me/olgarozet" style="color: var(--accent);">@olgarozet</a>
+      </p>
+      
+      <button id="close-success" style="width: 100%; padding: 0.875rem; background: var(--accent); color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 0.95rem;">
+        Закрыть
+      </button>
+    </div>
   `;
   
   modal.appendChild(form);
