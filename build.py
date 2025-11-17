@@ -58,6 +58,9 @@ def parse_markdown(text):
         if not in_paragraph:
             result.append('<p>')
             in_paragraph = True
+        else:
+            # Добавляем <br> между строками внутри параграфа
+            result.append('<br>')
             
         result.append(line)
     
