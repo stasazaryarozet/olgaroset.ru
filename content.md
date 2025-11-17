@@ -20,4 +20,8 @@ version: k
 Париж 16-19 января  
 [parisinjanuary.ru](https://parisinjanuary.ru)
 
-[@olgarozet](https://t.me/olgarozet) • [@olga_rozet](https://www.instagram.com/olga_rozet/) • o.g.rozet@gmail.com
+---
+
+[@olgarozet](https://t.me/olgarozet)  
+[@olga_rozet](https://www.instagram.com/olga_rozet/)  
+o.g.rozet@gmail.com
