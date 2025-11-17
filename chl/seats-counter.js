@@ -199,13 +199,17 @@ function showRegistrationForm() {
       </div>
     </form>
     
-    <div id="form-success" style="display: none; text-align: center; padding: 2rem 0;">
-      <h3 style="color: var(--accent); margin-bottom: 1rem;">✓ Заявка отправлена!</h3>
-      <p style="color: var(--text-muted);">Реквизиты для оплаты отправлены на ваш email.</p>
-      <button id="close-success" style="margin-top: 1rem; padding: 0.75rem 1.5rem; background: var(--accent); color: white; border: none; border-radius: 4px; cursor: pointer;">
-        Закрыть
-      </button>
-    </div>
+           <div id="form-success" style="display: none; text-align: center; padding: 2rem 0;">
+             <h3 style="color: var(--accent); margin-bottom: 1rem;">✓ Заявка отправлена!</h3>
+             <p style="color: var(--text-muted); margin-bottom: 1rem;">Реквизиты для оплаты отправлены на ваш email.</p>
+             <p style="color: var(--text-muted); font-size: 0.9rem;">
+               Вопросы? Напишите Ольге:<br>
+               <a href="https://t.me/olgarozet" style="color: var(--accent); text-decoration: underline;">Telegram: @olgarozet</a>
+             </p>
+             <button id="close-success" style="margin-top: 1rem; padding: 0.75rem 1.5rem; background: var(--accent); color: white; border: none; border-radius: 4px; cursor: pointer;">
+               Закрыть
+             </button>
+           </div>
   `;
   
   modal.appendChild(form);
@@ -254,10 +258,10 @@ function showRegistrationForm() {
       } else {
         alert('Произошла ошибка. Попробуйте ещё раз или напишите на o.g.rozet@gmail.com');
       }
-    } catch (error) {
-      console.error('Ошибка отправки:', error);
-      alert('Произошла ошибка. Попробуйте ещё раз или напишите на o.g.rozet@gmail.com');
-    }
+           } catch (error) {
+             console.error('Ошибка отправки:', error);
+             alert('Произошла ошибка. Пожалуйста, напишите Ольге:\n\nTelegram: @olgarozet\nEmail: o.g.rozet@gmail.com');
+           }
   });
 }
 
