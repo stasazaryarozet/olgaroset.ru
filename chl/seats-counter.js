@@ -201,11 +201,42 @@ function showRegistrationForm() {
     
            <div id="form-success" style="display: none; text-align: center; padding: 2rem 0;">
              <h3 style="color: var(--accent); margin-bottom: 1rem;">✓ Заявка отправлена!</h3>
-             <p style="color: var(--text-muted); margin-bottom: 1rem;">Реквизиты для оплаты отправлены на ваш email.</p>
+             
+             <div style="background: #f5f5f5; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0; text-align: left;">
+               <p style="margin: 0 0 1rem 0; font-weight: 600; text-align: center;">Реквизиты для оплаты:</p>
+               
+               <p style="margin: 0.5rem 0; color: var(--text); font-size: 0.95rem;">
+                 <strong>Карта Сбербанк:</strong><br>
+                 <code style="background: white; padding: 0.5rem; display: inline-block; margin-top: 0.25rem; border-radius: 4px; font-size: 1.1rem;">2202 2006 4099 4726</code>
+               </p>
+               
+               <p style="margin: 0.5rem 0; color: var(--text); font-size: 0.95rem;">
+                 <strong>Получатель:</strong> Ольга Георгиевна Р.
+               </p>
+               
+               <p style="margin: 0.5rem 0; color: var(--text); font-size: 0.95rem;">
+                 <strong>Сумма:</strong> 5 000 ₽
+               </p>
+               
+               <p style="margin: 0.5rem 0; color: var(--text); font-size: 0.95rem;">
+                 <strong>Назначение:</strong> ЦДЛ 2 декабря
+               </p>
+               
+               <button onclick="navigator.clipboard.writeText('2202200640994726'); this.textContent='✓ Скопировано'" 
+                 style="margin-top: 0.75rem; padding: 0.5rem 1rem; background: var(--accent); color: white; border: none; border-radius: 4px; cursor: pointer; width: 100%;">
+                 Скопировать номер карты
+               </button>
+             </div>
+             
+             <p style="color: var(--text-muted); margin-bottom: 1rem; font-size: 0.9rem;">
+               Реквизиты также отправлены на ваш email.
+             </p>
+             
              <p style="color: var(--text-muted); font-size: 0.9rem;">
                Вопросы? Напишите Ольге:<br>
                <a href="https://t.me/olgarozet" style="color: var(--accent); text-decoration: underline;">Telegram: @olgarozet</a>
              </p>
+             
              <button id="close-success" style="margin-top: 1rem; padding: 0.75rem 1.5rem; background: var(--accent); color: white; border: none; border-radius: 4px; cursor: pointer;">
                Закрыть
              </button>
