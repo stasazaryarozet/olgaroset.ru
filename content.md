@@ -10,7 +10,7 @@ version: k
 
 Подключить Ольгу к вашему делу.
 
-[Запись](https://cal.com/olgarozet/delo-40min)      
+[Запись](https://cal.com/olgarozet/delo)      
 
 ## Ближайшее
 
