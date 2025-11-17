@@ -4,9 +4,7 @@ version: k
 
 # Ольга Розет
 
-Художник. Искусствовед.
-
-34 года практики. 30 лет преподавания (ВБШД).       
+Художник.       
 
 ## Консультации
 
@@ -16,8 +14,9 @@ version: k
 
 ## Ближайшее
 
-**Лекция ЦДЛ** — 2 декабря
+**[Встреча ЦДЛ](cdl/)** — 2 декабря, 12:00  
+*Человек и Ремесло. Всегда и Сейчас.*
 
 **Paris 2026** — [запись](https://parisinjanuary.ru)
 
-o.g.rozet@gmail.com • [@olga_rozet](https://instagram.com/olga_rozet)
+[@olgarozet](https://t.me/olgarozet) • [@olga_rozet](https://www.instagram.com/olga_rozet/) • o.g.rozet@gmail.com

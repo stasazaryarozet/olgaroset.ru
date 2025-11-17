@@ -1,5 +1,5 @@
 #!/bin/bash
-cd "/Users/azaryarozet/Library/Mobile Documents/com~apple~CloudDocs/Дела/Ольга/olgaroset.ru"
+cd "/Users/azaryarozet/Library/Mobile Documents/com~apple~CloudDocs/○/Ольга/olgaroset.ru"
 fswatch -o content.md | while read; do
   echo "$(date '+%Y-%m-%d %H:%M:%S') 🔄 content.md изменён, публикую..."
   python3 build.py
