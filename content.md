@@ -1,5 +1,5 @@
 ---
-version: n
+version: o
 ---
 
 # Ольга Розет
@@ -12,7 +12,7 @@ version: n
 
 [Запись](https://cal.com/olgarozet/delo-40min)
 
-## Ближайшее
+---
 
 2 декабря  
 <a href="https://ru.wikipedia.org/wiki/Центральный_дом_литераторов">ЦДЛ</a>  
