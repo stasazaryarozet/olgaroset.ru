@@ -10,7 +10,7 @@ cal.com/olgarozet/delo-40min
 ## БЛИЖАЙШЕЕ
 
 2 декабря  
-ЦДЛ  
+<a href="https://ru.wikipedia.org/wiki/Центральный_дом_литераторов">ЦДЛ</a>  
 12:00  
 Встреча  
 olgaroset.ru/chl

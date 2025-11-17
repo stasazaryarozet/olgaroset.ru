@@ -1,5 +1,5 @@
 ---
-version: m
+version: n
 ---
 
 # Ольга Розет
@@ -15,7 +15,7 @@ version: m
 ## Ближайшее
 
 2 декабря  
-[ЦДЛ](https://ru.wikipedia.org/wiki/Центральный_дом_литераторов)  
+<a href="https://ru.wikipedia.org/wiki/Центральный_дом_литераторов">ЦДЛ</a>  
 12:00  
 Встреча  
 <a href="chl/">olgaroset.ru/chl</a>
