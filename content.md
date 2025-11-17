@@ -14,8 +14,11 @@ version: m
 
 ## Ближайшее
 
-Встреча 2 декабря  
+2 декабря  
+12:00  
+Встреча  
 <a href="chl/">olgaroset.ru/chl</a>
 
-Париж 16-19 января  
+16-19 января  
+Париж  
 <a href="https://parisinjanuary.ru">parisinjanuary.ru</a>

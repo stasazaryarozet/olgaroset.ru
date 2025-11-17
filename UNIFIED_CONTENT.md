@@ -9,10 +9,13 @@ cal.com/olgarozet/delo-40min
 
 ## БЛИЖАЙШЕЕ
 
-Встреча 2 декабря  
+2 декабря  
+12:00  
+Встреча  
 olgaroset.ru/chl
 
-Париж 16-19 января  
+16-19 января  
+Париж  
 parisinjanuary.ru
 
 ## ДОПОЛНИТЕЛЬНОЕ_TELEGRAM
