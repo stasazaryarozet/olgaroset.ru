@@ -10,6 +10,7 @@ cal.com/olgarozet/delo-40min
 ## БЛИЖАЙШЕЕ
 
 2 декабря  
+ЦДЛ  
 12:00  
 Встреча  
 olgaroset.ru/chl

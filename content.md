@@ -15,6 +15,7 @@ version: m
 ## Ближайшее
 
 2 декабря  
+[ЦДЛ](https://ru.wikipedia.org/wiki/Центральный_дом_литераторов)  
 12:00  
 Встреча  
 <a href="chl/">olgaroset.ru/chl</a>
