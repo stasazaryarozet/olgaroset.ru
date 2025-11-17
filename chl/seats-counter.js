@@ -38,40 +38,28 @@ const registerButton = document.getElementById('register-btn');
  * Загрузить количество свободных мест из Google Sheet
  */
 async function fetchSeatsLeft() {
-  const url = `https://sheets.googleapis.com/v4/spreadsheets/${CONFIG.SHEET_ID}/values/${encodeURIComponent(CONFIG.SHEET_NAME)}!${CONFIG.CELL_RANGE}?key=${CONFIG.API_KEY}`;
-  
+  // Используем статический JSON файл (обновляется вручную или через скрипт)
+  // Это проще и надёжнее, чем прямой доступ к Google Sheets API
   try {
-    const response = await fetch(url);
+    const response = await fetch('seats.json');
     
     if (!response.ok) {
-      // Если лист ещё не создан, возвращаем максимальное количество
-      if (response.status === 400 || response.status === 404) {
-        console.info('Лист ещё не создан, показываем полное количество мест');
-        return CONFIG.TOTAL_SEATS;
-      }
-      throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+      console.warn('seats.json недоступен, используем fallback');
+      return CONFIG.TOTAL_SEATS;
     }
     
     const data = await response.json();
     
-    // Проверяем наличие данных
-    if (!data.values || !data.values[0] || !data.values[0][0]) {
-      console.warn('Ячейка G2 пустая, возвращаем максимум');
-      return CONFIG.TOTAL_SEATS;
+    if (typeof data.seatsLeft === 'number' && data.seatsLeft >= 0) {
+      return data.seatsLeft;
     }
     
-    const seatsLeft = parseInt(data.values[0][0], 10);
-    
-    if (isNaN(seatsLeft) || seatsLeft < 0 || seatsLeft > CONFIG.TOTAL_SEATS) {
-      console.error('Некорректное значение в G2:', data.values[0][0]);
-      return currentSeatsLeft; // Возвращаем предыдущее значение
-    }
-    
-    return seatsLeft;
+    console.warn('Некорректные данные в seats.json, используем fallback');
+    return CONFIG.TOTAL_SEATS;
     
   } catch (error) {
-    console.error('Ошибка загрузки счётчика:', error);
-    return currentSeatsLeft; // Возвращаем предыдущее значение
+    console.warn('Ошибка загрузки данных:', error);
+    return CONFIG.TOTAL_SEATS; // Fallback
   }
 }
 
