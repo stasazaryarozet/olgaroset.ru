@@ -8,7 +8,7 @@
 
 **Стоимость:** 15,000 ₽
 
-[Записаться](https://cal.com/olgarozet/delo-40min)
+[Забронировать](https://cal.com/olgarozet/delo-40min)
 
 ---
 

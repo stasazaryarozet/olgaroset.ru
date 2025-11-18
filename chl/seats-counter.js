@@ -77,21 +77,21 @@ function updateUI(seatsLeft) {
     if (PAYMENT_SYSTEM_READY && PAYMENT_LINK) {
       // Автоматическая оплата готова
       registerButton.disabled = false;
-      registerButton.textContent = 'Зарегистрироваться';
+      registerButton.textContent = 'ЗАБРОНИРОВАТЬ';
       registerButton.onclick = () => {
         window.location.href = PAYMENT_LINK;
       };
     } else {
       // Fallback: Google Form
       registerButton.disabled = false;
-      registerButton.textContent = 'Записаться';
+      registerButton.textContent = 'ЗАБРОНИРОВАТЬ';
       registerButton.onclick = () => {
         window.open(FORM_URL_CDL, '_blank');
       };
     }
   } else if (!PAYMENT_SYSTEM_READY && !PAYMENT_LINK) {
     registerButton.disabled = true;
-    registerButton.textContent = 'Регистрация скоро откроется';
+    registerButton.textContent = 'Бронирование скоро откроется';
   } else if (seatsLeft <= 0) {
     registerButton.disabled = true;
     registerButton.textContent = 'Мест нет';
