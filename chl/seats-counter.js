@@ -134,10 +134,10 @@ async function updateSeatsCounter() {
 }
 
 /**
- * Показать форму регистрации (fallback)
+ * Показать информацию о регистрации
  */
 function showRegistrationForm() {
-  // Создаём модальное окно с формой
+  // Создаём модальное окно с контактами
   const modal = document.createElement('div');
   modal.style.cssText = `
     position: fixed;
@@ -153,59 +153,57 @@ function showRegistrationForm() {
     padding: 1rem;
   `;
   
-  const form = document.createElement('div');
-  form.style.cssText = `
+  const content = document.createElement('div');
+  content.style.cssText = `
     background: white;
     padding: 2.5rem;
     border-radius: 4px;
     max-width: 400px;
     width: 100%;
+    text-align: center;
   `;
   
-  form.innerHTML = `
-    <div id="registration-container">
-      <h2 style="font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 1.5rem; text-align: center;">Регистрация</h2>
-      
-      <form id="registration-form">
-        <input type="text" name="name" required 
-          style="width: 100%; padding: 0.875rem; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; margin-bottom: 0.75rem;"
-          placeholder="Имя">
-        
-        <input type="email" name="email" required 
-          style="width: 100%; padding: 0.875rem; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; margin-bottom: 1.25rem;"
-          placeholder="Email">
-        
-        <button type="submit" style="width: 100%; padding: 1rem; background: var(--accent); color: white; border: none; border-radius: 4px; font-size: 1rem; font-weight: 500; cursor: pointer; margin-bottom: 0.75rem;">
-          Отправить
-        </button>
-        
-        <button type="button" id="close-modal" style="width: 100%; padding: 0.75rem; background: transparent; color: #999; border: none; font-size: 0.9rem; cursor: pointer;">
-          Отмена
-        </button>
-      </form>
+  content.innerHTML = `
+    <h2 style="font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 1.5rem;">Регистрация</h2>
+    
+    <p style="margin-bottom: 1.5rem; line-height: 1.6;">
+      Напишите Ольге для регистрации:
+    </p>
+    
+    <p style="margin-bottom: 1rem;">
+      <a href="https://t.me/olgarozet" style="color: var(--accent); text-decoration: none; font-weight: 500; font-size: 1.1rem;">
+        Telegram: @olgarozet
+      </a>
+    </p>
+    
+    <p style="margin-bottom: 2rem; color: #666; font-size: 0.9rem;">
+      или
+    </p>
+    
+    <p style="margin-bottom: 2rem;">
+      <a href="mailto:o.g.rozet@gmail.com" style="color: var(--accent); text-decoration: none; font-weight: 500;">
+        o.g.rozet@gmail.com
+      </a>
+    </p>
+    
+    <div style="background: #f5f5f5; padding: 1rem; border-radius: 4px; margin-bottom: 1.5rem;">
+      <p style="font-size: 0.9rem; color: #666; margin: 0;">
+        <strong>5 000 ₽</strong><br>
+        Карта: <strong>5559 5720 5319 4603</strong><br>
+        Ольга Григорьевна Розет
+      </p>
     </div>
     
-    <div id="form-success" style="display: none; text-align: center; padding: 1rem 0;">
-      <h3 style="color: var(--accent); margin-bottom: 1rem; font-size: 1.2rem;">Готово</h3>
-      
-      <p style="color: var(--text-muted); margin-bottom: 0.5rem; font-size: 0.95rem;">
-        Карта Сбербанк<br>
-        <strong style="font-size:1.1rem;color:var(--text)">5559 5720 5319 4603</strong><br>
-        Ольга Григорьевна Розет<br>
-        <strong>5 000 ₽</strong>
-      </p>
-      
-      <p style="color: var(--text-muted); font-size: 0.85rem; margin:1rem 0;">
-        Вопросы: <a href="https://t.me/olgarozet" style="color: var(--accent);">@olgarozet</a>
-      </p>
-      
-      <button id="close-success" style="width: 100%; padding: 0.875rem; background: var(--accent); color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 0.95rem;">
-        Закрыть
-      </button>
-    </div>
+    <p style="font-size: 0.85rem; color: #999; margin-bottom: 1.5rem;">
+      Нет денег? Возможно, что-нибудь придумаем. Пожалуйста, пишите.
+    </p>
+    
+    <button id="close-modal" style="width: 100%; padding: 0.875rem; background: var(--accent); color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 0.95rem;">
+      Закрыть
+    </button>
   `;
   
-  modal.appendChild(form);
+  modal.appendChild(content);
   document.body.appendChild(modal);
   
   // Закрытие модального окна
@@ -214,47 +212,6 @@ function showRegistrationForm() {
     if (e.target === modal) closeModal();
   });
   document.getElementById('close-modal').addEventListener('click', closeModal);
-  
-  // Обработка отправки формы
-  document.getElementById('registration-form').addEventListener('submit', async (e) => {
-    e.preventDefault();
-    
-    const formData = new FormData(e.target);
-    const data = {
-      name: formData.get('name'),
-      email: formData.get('email'),
-      event: 'Встреча ЦДЛ — Человек и Ремесло. Всегда и Сейчас.',
-      date: '2 декабря 2025, 12:00'
-    };
-    
-    try {
-      // Отправка через Formspree (бесплатно, 50 заявок/месяц)
-      const response = await fetch('https://formspree.io/f/xvgwnvkb', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify(data)
-      });
-      
-      if (response.ok) {
-        // Показываем успех
-        document.getElementById('registration-container').style.display = 'none';
-        document.getElementById('form-success').style.display = 'block';
-        
-        // Автоматическая отправка email с реквизитами
-        // (Formspree автоответ настроен в аккаунте)
-        
-        document.getElementById('close-success').addEventListener('click', closeModal);
-      } else {
-        alert('Произошла ошибка. Попробуйте ещё раз или напишите на o.g.rozet@gmail.com');
-      }
-           } catch (error) {
-             console.error('Ошибка отправки:', error);
-             alert('Произошла ошибка. Пожалуйста, напишите Ольге:\n\nTelegram: @olgarozet\nEmail: o.g.rozet@gmail.com');
-           }
-  });
 }
 
 /**
