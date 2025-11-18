@@ -3,6 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
 <title>Человек и Ремесло. Всегда и Сейчас — Ольга Розет</title>
 <meta name="description" content="Встреча с Ольгой Розет в ЦДЛ. 2 декабря 2025, 12:00. Наблюдение, память, материя. Выступление, обед, разговоры.">
 <meta name="keywords" content="Ольга Розет, ЦДЛ, встреча, дизайн интерьеров, художник, Центральный дом литераторов">
@@ -98,39 +101,57 @@ footer p{line-height:2}
 <div class="info">
   <p><strong>Дата:</strong> 2 декабря 2025</p>
   <p><strong>Время:</strong> 12:00</p>
-  <p><strong>Место:</strong> Центральный дом литераторов<a href="https://ru.wikipedia.org/wiki/Центральный_дом_литераторов" class="external-link"></a>, Поварская 50/53</p>
+  <p><strong>Место:</strong> <a href="https://ru.wikipedia.org/wiki/Центральный_дом_литераторов" class="external-link">Центральный дом литераторов</a><br>Поварская 50/53</p>
 </div>
 
 <p style="text-align:center"><a href="event.ics" download>+ Добавить в календарь</a></p>
 
 <div class="price">5 000 ₽</div>
 
+<p style="text-align:center;font-size:0.9em;color:#666;margin:0.5em 0 1.5em 0;line-height:1.6">
+Нет этих денег? Возможно, что-нибудь придумаем. Пожалуйста, пишите.
+</p>
+
 <div class="info" style="margin-top:1em">
   <p><strong>Обед в ресторане ЦДЛ</strong></p>
-  <p>Вы оплачиваете отдельно по меню ресторана</p>
+  <p>Оплачиваете отдельно по меню ресторана</p>
 </div>
-
-<p style="text-align:center;font-size:0.9em;color:#666;margin:1.5em 0;line-height:1.6">
-Нет 5 000 ₽? Возможно, что-нибудь придумаем. Пожалуйста, пишите.
-</p>
 
 <div class="availability">
   <div id="seats-left">25 мест</div>
 </div>
 
-<button class="cta" id="register-btn" disabled>Загрузка...</button>
-</main>
-
-<div id="footer"></div>
+<form id="booking-form" style="margin-top:2em;padding:2em;background:#fafafa;border-left:3px solid var(--accent)">
+  <h3 style="margin-top:0">Забронировать место</h3>
+  
+  <div style="margin:1em 0">
+    <label for="name" style="display:block;margin-bottom:0.5em;font-weight:500">Ваше имя</label>
+    <input type="text" id="name" name="name" required style="width:100%;padding:0.8em;border:1px solid var(--border);border-radius:4px;font-size:1em">
+  </div>
+  
+  <div style="margin:1em 0">
+    <label for="email" style="display:block;margin-bottom:0.5em;font-weight:500">Email</label>
+    <input type="email" id="email" name="email" required style="width:100%;padding:0.8em;border:1px solid var(--border);border-radius:4px;font-size:1em">
+  </div>
+  
+  <div style="margin:1em 0">
+    <label for="telegram" style="display:block;margin-bottom:0.5em;font-weight:500">Telegram (опционально)</label>
+    <input type="text" id="telegram" name="telegram" placeholder="@username" style="width:100%;padding:0.8em;border:1px solid var(--border);border-radius:4px;font-size:1em">
+  </div>
+  
+  <button type="submit" class="cta" id="submit-btn">ЗАБРОНИРОВАТЬ</button>
+  
+  <div id="result-message" style="margin-top:1em;padding:1em;border-radius:4px;display:none"></div>
+</form>
 
 <noscript>
-  <div style="position:fixed;top:0;left:0;width:100%;background:#fff3cd;padding:1rem;text-align:center;border-bottom:2px solid #ffc107;z-index:10000">
+  <div style="margin-top:2em;padding:1.5em;background:#fff3cd;border:2px solid #ffc107;border-radius:4px">
     <p style="margin:0 0 0.5rem 0;color:#856404;font-weight:600">Для бронирования напишите Ольге:</p>
-    <p style="margin:0;color:#856404"><a href="https://t.me/olgarozet" style="color:#856404;font-weight:600;text-decoration:underline">@olgarozet</a> или <a href="mailto:o.g.rozet@gmail.com" style="color:#856404;font-weight:600;text-decoration:underline">o.g.rozet@gmail.com</a></p>
+    <p style="margin:0;color:#856404"><a href="https://t.me/ORozet" style="color:#856404;font-weight:600;text-decoration:underline">@ORozet</a> или <a href="mailto:o.g.rozet@gmail.com" style="color:#856404;font-weight:600;text-decoration:underline">o.g.rozet@gmail.com</a></p>
   </div>
 </noscript>
 
-    <script src="/footer.js"></script>
-    <script src="seats-counter.js?v=5"></script>
+    <script src="/footer.js?v=6"></script>
+    <script src="seats-counter.js?v=6"></script>
 </body>
 </html>

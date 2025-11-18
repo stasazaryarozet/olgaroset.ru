@@ -3,6 +3,10 @@
 Генерирует index.html из content.md
 """
 import re
+import time
+
+# Генерируем версию на основе timestamp
+VERSION = str(int(time.time()))
 
 # Читаем content.md
 with open('content.md', 'r', encoding='utf-8') as f:
@@ -25,6 +29,15 @@ def parse_markdown(text):
     
     # Ссылки
     text = re.sub(r'\[([^\]]+)\]\(([^\)]+)\)', r'<a href="\2">\1</a>', text)
+    
+    # Голые URL (должны быть после обработки markdown-ссылок)
+    # Убираем https:// из отображаемого текста
+    def clean_url_display(match):
+        url = match.group(1)
+        display = url.replace('https://', '').replace('http://', '')
+        return f'<a href="{url}">{display}</a>'
+    
+    text = re.sub(r'(?<!href=")(https?://[^\s<]+)', clean_url_display, text)
     
     # Параграфы и переносы
     lines = text.split('\n')
@@ -77,6 +90,9 @@ html = f'''<!DOCTYPE html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="Ольга Розет — художник, искусствовед">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
 <title>Ольга Розет</title>
 <style>
 :root{{--text:#1a1a1a;--bg:#fff;--link:#000;--border:#e0e0e0;--focus:#0066cc}}
@@ -106,7 +122,7 @@ footer a{{color:#666;border-bottom-color:#ccc}}
 {html_content}
 </main>
 <div id="footer"></div>
-<script src="footer.js"></script>
+<script src="footer.js?v={VERSION}"></script>
 </body>
 </html>'''
 

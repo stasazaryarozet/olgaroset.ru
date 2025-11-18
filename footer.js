@@ -5,7 +5,10 @@ document.addEventListener('DOMContentLoaded', function() {
   const footerContainer = document.getElementById('footer');
   if (!footerContainer) return;
   
-  fetch('/footer.html')
+  // Cache-busting: добавляем timestamp
+  const version = Date.now();
+  
+  fetch(`/footer.html?v=${version}`)
     .then(response => response.text())
     .then(html => {
       footerContainer.innerHTML = html;
