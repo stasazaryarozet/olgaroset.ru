@@ -27,13 +27,10 @@ def parse_markdown(text):
     # Жирный текст
     text = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', text)
     
-    # Сноски в стиле Википедии [^1]
-    text = re.sub(r'\[\^(\d+)\]', r'<sup><a href="#ref\1" class="wiki-ref">[\1]</a></sup>', text)
+    # Ссылки в стиле Википедии [[1]](url) — обрабатываем ПЕРВЫМИ
+    text = re.sub(r'\[\[(\d+)\]\]\(([^\)]+)\)', r'<sup><a href="\2" class="wiki-ref">[\1]</a></sup>', text)
     
-    # Определения сносок [^1]: текст
-    text = re.sub(r'^\[\^(\d+)\]:\s*(.+)$', r'<p id="ref\1" class="footnote"><sup>[\1]</sup> \2</p>', text, flags=re.MULTILINE)
-    
-    # Ссылки
+    # Обычные ссылки [текст](url)
     text = re.sub(r'\[([^\]]+)\]\(([^\)]+)\)', r'<a href="\2">\1</a>', text)
     
     # Голые URL (должны быть после обработки markdown-ссылок)
