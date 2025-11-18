@@ -1,5 +1,5 @@
 ---
-version: o
+version: p
 ---
 
 # Ольга Розет
@@ -10,7 +10,7 @@ version: o
 
 Подключить Ольгу к вашему делу.
 
-[Запись](https://cal.com/olgarozet/delo-40min)
+[Напишите](https://t.me/olgarozet)
 
 ---
 
