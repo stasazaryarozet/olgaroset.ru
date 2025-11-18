@@ -1,6 +1,6 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//olgaroset.ru//NONSGML Event//EN
+PRODID:-//olgarozet.ru//NONSGML Event//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Человек и Ремесло. Всегда и Сейчас
@@ -9,9 +9,9 @@ BEGIN:VEVENT
 DTSTART:20251202T090000Z
 DTEND:20251202T130000Z
 DTSTAMP:20251117T120000Z
-UID:cdl-2dec2025@olgaroset.ru
+UID:cdl-2dec2025@olgarozet.ru
 SUMMARY:Человек и Ремесло. Всегда и Сейчас — Ольга Розет
-DESCRIPTION:Встреча с Ольгой Розет в ЦДЛ\n\nФормат:\n• Выступление\n• Обед в ресторане ЦДЛ\n• Разговоры\n\nСтоимость: 5 000 ₽ + обед\n\nПодробности: https://olgaroset.ru/chl/
+DESCRIPTION:Встреча с Ольгой Розет в ЦДЛ\n\nФормат:\n• Выступление\n• Обед в ресторане ЦДЛ\n• Разговоры\n\nСтоимость: 5 000 ₽ + обед\n\nПодробности: https://olgarozet.ru/chl/
 LOCATION:ЦДЛ, Поварская 50/53, Москва
 GEO:55.760259;37.595634
 URL:https://olgaroset.ru/chl/
