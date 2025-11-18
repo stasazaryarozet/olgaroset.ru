@@ -163,25 +163,27 @@ function showRegistrationForm() {
   `;
   
   form.innerHTML = `
-    <h2 style="font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 1.5rem; text-align: center;">Регистрация</h2>
-    
-    <form id="registration-form">
-      <input type="text" name="name" required 
-        style="width: 100%; padding: 0.875rem; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; margin-bottom: 0.75rem;"
-        placeholder="Имя">
+    <div id="registration-container">
+      <h2 style="font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 1.5rem; text-align: center;">Регистрация</h2>
       
-      <input type="email" name="email" required 
-        style="width: 100%; padding: 0.875rem; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; margin-bottom: 1.25rem;"
-        placeholder="Email">
-      
-      <button type="submit" style="width: 100%; padding: 1rem; background: var(--accent); color: white; border: none; border-radius: 4px; font-size: 1rem; font-weight: 500; cursor: pointer; margin-bottom: 0.75rem;">
-        Отправить
-      </button>
-      
-      <button type="button" id="close-modal" style="width: 100%; padding: 0.75rem; background: transparent; color: #999; border: none; font-size: 0.9rem; cursor: pointer;">
-        Отмена
-      </button>
-    </form>
+      <form id="registration-form">
+        <input type="text" name="name" required 
+          style="width: 100%; padding: 0.875rem; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; margin-bottom: 0.75rem;"
+          placeholder="Имя">
+        
+        <input type="email" name="email" required 
+          style="width: 100%; padding: 0.875rem; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; margin-bottom: 1.25rem;"
+          placeholder="Email">
+        
+        <button type="submit" style="width: 100%; padding: 1rem; background: var(--accent); color: white; border: none; border-radius: 4px; font-size: 1rem; font-weight: 500; cursor: pointer; margin-bottom: 0.75rem;">
+          Отправить
+        </button>
+        
+        <button type="button" id="close-modal" style="width: 100%; padding: 0.75rem; background: transparent; color: #999; border: none; font-size: 0.9rem; cursor: pointer;">
+          Отмена
+        </button>
+      </form>
+    </div>
     
     <div id="form-success" style="display: none; text-align: center; padding: 1rem 0;">
       <h3 style="color: var(--accent); margin-bottom: 1rem; font-size: 1.2rem;">Готово</h3>
@@ -238,7 +240,7 @@ function showRegistrationForm() {
       
       if (response.ok) {
         // Показываем успех
-        document.getElementById('registration-form').parentElement.style.display = 'none';
+        document.getElementById('registration-container').style.display = 'none';
         document.getElementById('form-success').style.display = 'block';
         
         // Автоматическая отправка email с реквизитами
