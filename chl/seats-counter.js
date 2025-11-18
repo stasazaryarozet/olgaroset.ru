@@ -9,7 +9,7 @@ const CONFIG = {
   UPDATE_INTERVAL: 30000
 };
 
-const FORM_URL_CDL = 'https://docs.google.com/forms/d/e/1Okpm9C4Lnbih_4bQQy1ZwaRCOg72YAWu16i5Bu4g_kA/viewform';
+const FORM_URL_CDL = 'https://docs.google.com/forms/d/e/1cHDiMR5AN2pX5YIe9S66ggFYmrAbLUKgKdHdmLQ391o/viewform';
 
 // Система оплаты (fallback: форма заявки)
 const PAYMENT_SYSTEM_READY = false;
