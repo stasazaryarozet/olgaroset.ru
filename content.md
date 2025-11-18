@@ -24,7 +24,7 @@
 
 15 000 ₽
 
-[В Дело](https://cal.com/olgarozet/delo)
+[В Дело](https://cal.com/olgarozet/delo-40min)
 
 ---
 
