@@ -227,7 +227,7 @@ function showRegistrationForm() {
     
     try {
       // Отправка через Formspree (бесплатно, 50 заявок/месяц)
-      const response = await fetch('https://formspree.io/f/xannqbop', {
+      const response = await fetch('https://formspree.io/f/xvgwnvkb', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
