@@ -8,7 +8,7 @@
 
 **Стоимость:** 15 000 ₽
 
-[В Дело](https://cal.com/olgarozet/delo-40min)
+[В Дело](https://cal.com/olgarozet/delo)
 
 ---
 
@@ -24,10 +24,6 @@ https://olgarozet.ru/chl/
 https://parisinjanuary.ru
 
 ---
-
-## Нужна помощь?
-
-Не можете себе позволить? Возможно, что-нибудь придумаем.
 
 
 [^1]: [Википедия](https://ru.wikipedia.org/wiki/Центральный_дом_литераторов)
