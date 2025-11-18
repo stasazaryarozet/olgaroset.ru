@@ -8,13 +8,6 @@ import re
 with open('content.md', 'r', encoding='utf-8') as f:
     content = f.read()
 
-# Извлекаем версию
-version_match = re.search(r'version:\s*(.+)', content)
-version = version_match.group(1).strip() if version_match else '1.0'
-
-# Удаляем frontmatter
-content = re.sub(r'^---.*?---\n', '', content, flags=re.DOTALL)
-
 # Парсим Markdown вручную (простой парсер)
 def parse_markdown(text):
     # Заголовки
@@ -94,7 +87,6 @@ a:focus-visible{{outline:2px solid var(--focus);outline-offset:2px}}
 strong{{font-weight:500}}
 footer{{margin-top:4em;padding-top:2em;border-top:1px solid var(--border);font-size:0.9em;color:#666}}
 footer a{{color:#666;border-bottom-color:#ccc}}
-#v{{position:fixed;bottom:12px;right:12px;font-size:11px;color:#999;font-variant-numeric:tabular-nums}}
 @media(prefers-reduced-motion:reduce){{*{{animation:none!important}}}}
 @media(max-width:600px){{html{{font-size:17px}}body{{padding:3em 1.2em 2em}}}}
 </style>
@@ -105,7 +97,6 @@ footer a{{color:#666;border-bottom-color:#ccc}}
 </main>
 <div id="footer"></div>
 <script src="footer.js"></script>
-<div id="v">v{version}</div>
 </body>
 </html>'''
 
@@ -113,4 +104,4 @@ footer a{{color:#666;border-bottom-color:#ccc}}
 with open('index.html', 'w', encoding='utf-8') as f:
     f.write(html)
 
-print(f"✅ Сгенерирован index.html (версия {version})")
+print(f"✅ Сгенерирован index.html")
