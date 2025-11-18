@@ -4,6 +4,12 @@
 """
 import re
 import time
+import sys
+from pathlib import Path
+
+# Импортируем meta_helper из родительской директории
+sys.path.insert(0, str(Path(__file__).parent.parent))
+from meta_helper import get_meta_block_full
 
 # Генерируем версию на основе timestamp
 VERSION = str(int(time.time()))
@@ -83,61 +89,8 @@ def parse_markdown(text):
 
 html_content = parse_markdown(content)
 
-# Форма помощи с оплатой
-help_form = '''
-<form id="help-form" style="margin-top:1.5em;padding:1.5em;background:#fafafa;border-left:3px solid #E31B1B;max-width:28em">
-  <div style="margin:1em 0">
-    <label for="help-name" style="display:block;margin-bottom:0.5em">Имя</label>
-    <input type="text" id="help-name" name="name" required style="width:100%;padding:0.7em;border:1px solid #e0e0e0;border-radius:3px;font-size:1em">
-  </div>
-  
-  <div style="margin:1em 0">
-    <label for="help-contact" style="display:block;margin-bottom:0.5em">Email или Telegram</label>
-    <input type="text" id="help-contact" name="contact" required placeholder="email@example.com или @username" style="width:100%;padding:0.7em;border:1px solid #e0e0e0;border-radius:3px;font-size:1em">
-  </div>
-  
-  <button type="submit" style="width:100%;padding:0.8em;background:#E31B1B;color:white;border:none;border-radius:3px;font-size:1em;cursor:pointer">Отправить</button>
-  
-  <div id="help-result" style="margin-top:1em;padding:0.8em;border-radius:3px;display:none"></div>
-</form>
-<script>
-document.getElementById('help-form').addEventListener('submit', async (e) => {
-  e.preventDefault();
-  const btn = e.target.querySelector('button');
-  const result = document.getElementById('help-result');
-  const formData = new FormData(e.target);
-  
-  btn.disabled = true;
-  btn.textContent = 'Отправка...';
-  
-  try {
-    const response = await fetch('https://formspree.io/f/xanygnaw', {
-      method: 'POST',
-      body: formData,
-      headers: {'Accept': 'application/json'}
-    });
-    
-    if (response.ok) {
-      result.style.display = 'block';
-      result.style.background = '#d4edda';
-      result.style.color = '#155724';
-      result.textContent = '✓ Отправлено! Ольга свяжется с вами.';
-      e.target.reset();
-    } else {
-      throw new Error('Ошибка отправки');
-    }
-  } catch (error) {
-    result.style.display = 'block';
-    result.style.background = '#f8d7da';
-    result.style.color = '#721c24';
-    result.textContent = '✗ Ошибка. Напишите на o.g.rozet@gmail.com';
-  } finally {
-    btn.disabled = false;
-    btn.textContent = 'Отправить';
-  }
-});
-</script>
-'''
+# Форма помощи с оплатой из единого источника
+help_form = get_meta_block_full('web')
 
 # Генерируем HTML
 html = f'''<!DOCTYPE html>

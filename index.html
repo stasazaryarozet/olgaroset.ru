@@ -74,20 +74,23 @@ footer a{color:#666;border-bottom-color:#ccc}
 <sup><a href="#ref1" class="wiki-ref">[1]</a></sup>: <a href="https://ru.wikipedia.org/wiki/Центральный_дом_литераторов">Википедия</a>
 </p>
 
-<form id="help-form" style="margin-top:1.5em;padding:1.5em;background:#fafafa;border-left:3px solid #E31B1B;max-width:28em">
+<h2 style="font-size:1.3em;font-weight:400;margin-bottom:0.5em">Нужна помощь?</h2>
+<p style="color:#666;margin-bottom:1.5em">Нет достаточно денег? Возможно, что-нибудь придумаем.</p>
+
+<form id="help-form" style="padding:1.5em;background:#fafafa;border-left:3px solid #E31B1B;max-width:28em">
   <div style="margin:1em 0">
-    <label for="help-name" style="display:block;margin-bottom:0.5em">Имя</label>
-    <input type="text" id="help-name" name="name" required style="width:100%;padding:0.7em;border:1px solid #e0e0e0;border-radius:3px;font-size:1em">
+    <label for="help-name" style="display:block;margin-bottom:0.5em;font-weight:500">Имя</label>
+    <input type="text" id="help-name" name="name" required style="width:100%;padding:0.7em;border:1px solid #e0e0e0;border-radius:4px;font-size:1em">
   </div>
   
   <div style="margin:1em 0">
-    <label for="help-contact" style="display:block;margin-bottom:0.5em">Email или Telegram</label>
-    <input type="text" id="help-contact" name="contact" required placeholder="email@example.com или @username" style="width:100%;padding:0.7em;border:1px solid #e0e0e0;border-radius:3px;font-size:1em">
+    <label for="help-contact" style="display:block;margin-bottom:0.5em;font-weight:500">Email или Telegram</label>
+    <input type="text" id="help-contact" name="contact" required placeholder="email@example.com или @username" style="width:100%;padding:0.7em;border:1px solid #e0e0e0;border-radius:4px;font-size:1em">
   </div>
   
-  <button type="submit" style="width:100%;padding:0.8em;background:#E31B1B;color:white;border:none;border-radius:3px;font-size:1em;cursor:pointer">Отправить</button>
+  <button type="submit" style="width:100%;padding:0.8em;background:#E31B1B;color:white;border:none;border-radius:4px;font-size:1em;cursor:pointer">Отправить</button>
   
-  <div id="help-result" style="margin-top:1em;padding:0.8em;border-radius:3px;display:none"></div>
+  <div id="help-result" style="margin-top:1em;padding:0.8em;border-radius:4px;display:none"></div>
 </form>
 <script>
 document.getElementById('help-form').addEventListener('submit', async (e) => {
@@ -127,8 +130,9 @@ document.getElementById('help-form').addEventListener('submit', async (e) => {
 });
 </script>
 
+
 </main>
 <div id="footer"></div>
-<script src="footer.js?v=1763489071"></script>
+<script src="footer.js?v=1763489259"></script>
 </body>
 </html>
