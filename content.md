@@ -1,5 +1,5 @@
 ---
-version: s
+version: t
 ---
 
 # Ольга Розет
@@ -24,6 +24,6 @@ version: s
 <a href="https://ru.wikipedia.org/wiki/Центральный_дом_литераторов">Центральный Дом Литераторов</a><sup><a href="https://ru.wikipedia.org/wiki/Центральный_дом_литераторов">[1]</a></sup>  
 <a href="chl/">olgaroset.ru/chl</a>
 
-**15–18 января**  
+**15–18+ января**  
 Париж  
 <a href="https://parisinjanuary.ru">parisinjanuary.ru</a>
