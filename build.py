@@ -103,13 +103,8 @@ footer a{{color:#666;border-bottom-color:#ccc}}
 <main>
 {html_content}
 </main>
-<footer>
-<p>
-<a href="https://t.me/olgarozet">@olgarozet</a><br>
-<a href="https://www.instagram.com/olga_rozet/">@olga_rozet</a><br>
-o.g.rozet@gmail.com
-</p>
-</footer>
+<div id="footer"></div>
+<script src="footer.js"></script>
 <div id="v">v{version}</div>
 </body>
 </html>'''
