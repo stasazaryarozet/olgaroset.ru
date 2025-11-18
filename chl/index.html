@@ -116,6 +116,10 @@ footer p{line-height:2}
   <div id="seats-left">25 мест</div>
 </div>
 
+<p style="color:#666;font-size:0.9em;text-align:center;margin:1.5em 0">
+  100% возмещение без объяснений, если не восторг.
+</p>
+
 <form id="booking-form" style="margin-top:2em;padding:2em;background:#fafafa;border-left:3px solid var(--accent)">
   <h3 style="margin-top:0">Забронировать место</h3>
   
@@ -151,59 +155,17 @@ footer p{line-height:2}
 <h2 style="font-size:1.3em;font-weight:400;margin-bottom:0.5em">Нужна помощь?</h2>
 <p style="color:#666;margin-bottom:1.5em">Не можете себе позволить? Возможно, что-нибудь придумаем.</p>
 
-<form id="help-form" style="padding:1.5em;background:#fafafa;border-left:3px solid var(--accent);max-width:28em">
-  <div style="margin:1em 0">
-    <label for="help-name" style="display:block;margin-bottom:0.5em;font-weight:500">Имя</label>
-    <input type="text" id="help-name" name="name" required style="width:100%;padding:0.7em;border:1px solid var(--border);border-radius:4px;font-size:1em">
-  </div>
-  
-  <div style="margin:1em 0">
-    <label for="help-contact" style="display:block;margin-bottom:0.5em;font-weight:500">Email или Telegram</label>
-    <input type="text" id="help-contact" name="contact" required placeholder="email@example.com или @username" style="width:100%;padding:0.7em;border:1px solid var(--border);border-radius:4px;font-size:1em">
-  </div>
-  
-  <button type="submit" class="cta">Отправить</button>
-  
-  <div id="help-result" style="margin-top:1em;padding:0.8em;border-radius:4px;display:none"></div>
-</form>
+<p style="color:#666;font-size:0.95em;line-height:1.6;max-width:32em">
+  Напишите письмо на <a href="mailto:o.g.rozet@gmail.com?subject=Субсидия%20ЦДЛ">o.g.rozet@gmail.com</a> с темой <strong>"Субсидия"</strong>.<br>
+  В письме изложите ситуацию в самых общих чертах.<br>
+  Или Telegram: <a href="https://t.me/ORozet">@ORozet</a>
+</p>
 
-<script>
-document.getElementById('help-form').addEventListener('submit', async (e) => {
-  e.preventDefault();
-  const btn = e.target.querySelector('button');
-  const result = document.getElementById('help-result');
-  const formData = new FormData(e.target);
-  
-  btn.disabled = true;
-  btn.textContent = 'Отправка...';
-  
-  try {
-    const response = await fetch('https://formspree.io/f/xanygnaw', {
-      method: 'POST',
-      body: formData,
-      headers: {'Accept': 'application/json'}
-    });
-    
-    if (response.ok) {
-      result.style.display = 'block';
-      result.style.background = '#d4edda';
-      result.style.color = '#155724';
-      result.textContent = '✓ Отправлено! Ольга свяжется с вами.';
-      e.target.reset();
-    } else {
-      throw new Error('Ошибка отправки');
-    }
-  } catch (error) {
-    result.style.display = 'block';
-    result.style.background = '#f8d7da';
-    result.style.color = '#721c24';
-    result.textContent = '✗ Ошибка. Напишите на o.g.rozet@gmail.com с темой "Субсидия"';
-  } finally {
-    btn.disabled = false;
-    btn.textContent = 'Отправить';
-  }
-});
-</script>
+<hr style="margin:3em 0;border:none;border-top:1px solid #e0e0e0">
+
+<p style="color:#666;font-size:0.9em;text-align:center">
+  100% возмещение без объяснений, если не восторг.
+</p>
 
     <script src="/footer.js?v=6"></script>
     <script src="seats-counter.js?v=6"></script>
