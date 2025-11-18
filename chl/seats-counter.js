@@ -144,6 +144,54 @@ async function init() {
       updateSeatsCounter();
     }
   });
+  
+  // Обработчик формы бронирования
+  const form = document.getElementById('booking-form');
+  const submitBtn = document.getElementById('submit-btn');
+  const resultMessage = document.getElementById('result-message');
+  
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      // Отключаем кнопку
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Отправка...';
+      
+      const formData = new FormData(form);
+      const name = formData.get('name');
+      const email = formData.get('email');
+      
+      try {
+        // Открываем Google Form с предзаполненными данными
+        // ID формы: 1cHDiMR5AN2pX5YIe9S66ggFYmrAbLUKgKdHdmLQ391o
+        const formUrl = `https://docs.google.com/forms/d/e/1FAIpQLSdcHDiMR5AN2pX5YIe9S66ggFYmrAbLUKgKdHdmLQ391o/viewform?usp=pp_url&entry.name=${encodeURIComponent(name)}&entry.email=${encodeURIComponent(email)}`;
+        
+        window.open(formUrl, '_blank');
+        
+        // Показываем сообщение
+        resultMessage.style.display = 'block';
+        resultMessage.style.background = '#d4edda';
+        resultMessage.style.borderLeft = '3px solid #28a745';
+        resultMessage.style.color = '#155724';
+        resultMessage.innerHTML = '✓ Открыта форма бронирования. Пожалуйста, завершите регистрацию.';
+        
+        // Очищаем форму
+        form.reset();
+        
+      } catch (error) {
+        console.error('Ошибка при отправке:', error);
+        resultMessage.style.display = 'block';
+        resultMessage.style.background = '#f8d7da';
+        resultMessage.style.borderLeft = '3px solid #dc3545';
+        resultMessage.style.color = '#721c24';
+        resultMessage.innerHTML = '✗ Ошибка. Напишите: <a href="mailto:o.g.rozet@gmail.com">o.g.rozet@gmail.com</a>';
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'ЗАБРОНИРОВАТЬ';
+      }
+    });
+  }
 }
 
 // Запуск при загрузке страницы
