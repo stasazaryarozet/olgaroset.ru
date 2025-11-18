@@ -1,5 +1,5 @@
 ---
-version: p
+version: q
 ---
 
 # Ольга Розет
@@ -14,10 +14,14 @@ version: p
 
 ---
 
+21 ноября  
+17:30  
+Слот 40 мин
+
 2 декабря  
-<a href="https://ru.wikipedia.org/wiki/Центральный_дом_литераторов">ЦДЛ</a>  
 12:00  
 Встреча  
+<a href="https://ru.wikipedia.org/wiki/Центральный_дом_литераторов">Центральный Дом Литераторов</a><sup><a href="https://ru.wikipedia.org/wiki/Центральный_дом_литераторов">[1]</a></sup>  
 <a href="chl/">olgaroset.ru/chl</a>
 
 16-19 января  
