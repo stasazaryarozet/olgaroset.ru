@@ -17,6 +17,12 @@ def parse_markdown(text):
     # Жирный текст
     text = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', text)
     
+    # Сноски в стиле Википедии [^1]
+    text = re.sub(r'\[\^(\d+)\]', r'<sup><a href="#ref\1" class="wiki-ref">[\1]</a></sup>', text)
+    
+    # Определения сносок [^1]: текст
+    text = re.sub(r'^\[\^(\d+)\]:\s*(.+)$', r'<p id="ref\1" class="footnote"><sup>[\1]</sup> \2</p>', text, flags=re.MULTILINE)
+    
     # Ссылки
     text = re.sub(r'\[([^\]]+)\]\(([^\)]+)\)', r'<a href="\2">\1</a>', text)
     
@@ -87,6 +93,10 @@ a:focus-visible{{outline:2px solid var(--focus);outline-offset:2px}}
 strong{{font-weight:500}}
 footer{{margin-top:4em;padding-top:2em;border-top:1px solid var(--border);font-size:0.9em;color:#666}}
 footer a{{color:#666;border-bottom-color:#ccc}}
+.wiki-ref{{color:#0645ad;text-decoration:none}}
+.wiki-ref:hover{{text-decoration:underline}}
+.footnote{{font-size:0.9em;color:#666;margin-top:2em;padding-top:1em;border-top:1px solid var(--border)}}
+.footnote sup{{margin-right:0.5em}}
 @media(prefers-reduced-motion:reduce){{*{{animation:none!important}}}}
 @media(max-width:600px){{html{{font-size:17px}}body{{padding:3em 1.2em 2em}}}}
 </style>
