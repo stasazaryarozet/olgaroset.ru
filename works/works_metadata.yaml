@@ -1,0 +1,294 @@
+# Метаданные работ Ольги Розет
+# Backend для галереи olgarozet.ru/works/
+# Каждая работа содержит максимум доступной информации
+
+works:
+  - id: "001"
+    title: "Aldo 2013"
+    title_en: "Aldo 2013"
+    year: 2013
+    technique: "Акварель, бумага"
+    size: null  # требуется уточнение
+    dimensions_px: "4374×5098"
+    location: null  # требуется уточнение
+    context: "Портрет Альдо Ботоли, преподавателя Школы Дизайна в Сейлансе, Франция"
+    signed: false
+    source_file: "Aldo 2013.jpg"
+    source_location: "/Volumes/OlgaWork/Мои рисунки/"
+    artist_metadata: "olga"
+    file_size_bytes: 813934
+    tags: ["портрет", "акварель", "Франция", "2013"]
+    
+  - id: "002"
+    title: "Giulio2013"
+    title_en: "Giulio2013"
+    year: 2013
+    technique: "Акварель, бумага"
+    size: null
+    dimensions_px: "4591×5354"
+    location: null
+    context: "Портрет Джулио Бертанья, преподавателя Школы Дизайна в Сейлансе, Франция"
+    signed: false
+    source_file: "Giulio2013.jpg"
+    source_location: "/Volumes/OlgaWork/Мои рисунки/"
+    file_size_bytes: 967576
+    tags: ["портрет", "акварель", "Франция", "2013"]
+    
+  - id: "003"
+    title: "Альдо Ботоли"
+    title_en: "Aldo Botoli"
+    year: null
+    technique: "Акварель, бумага"
+    size: null
+    dimensions_px: "1318×1693"
+    location: null
+    context: "Портрет Альдо Ботоли"
+    signed: false
+    source_file: "Альдо Ботоли.jpg"
+    source_location: "/Volumes/OlgaWork/Мои рисунки/"
+    file_size_bytes: 178848
+    tags: ["портрет", "акварель"]
+    
+  - id: "004"
+    title: "Антиб1"
+    title_en: "Antibes 1"
+    year: null
+    technique: "Акварель, бумага"
+    size: null
+    dimensions_px: "2445×3321"
+    location: null
+    context: "Пейзаж Антиба, Лазурный Берег, Франция"
+    signed: false
+    source_file: "Антиб1.jpg"
+    source_location: "/Volumes/OlgaWork/Мои рисунки/"
+    file_size_bytes: 729656
+    tags: ["пейзаж", "акварель", "Антиб", "Франция"]
+    
+  - id: "005"
+    title: "Антиб2"
+    title_en: "Antibes 2"
+    year: null
+    technique: "Акварель, бумага"
+    size: null
+    dimensions_px: "3077×2310"
+    location: null
+    context: "Пейзаж Антиба, Лазурный Берег, Франция"
+    signed: false
+    source_file: "Антиб2.jpg"
+    source_location: "/Volumes/OlgaWork/Мои рисунки/"
+    file_size_bytes: 3077110
+    tags: ["пейзаж", "акварель", "Антиб", "Франция"]
+    
+  - id: "006"
+    title: "Антиб3"
+    title_en: "Antibes 3"
+    year: null
+    technique: "Акварель, бумага"
+    size: null
+    dimensions_px: "3375×2543"
+    location: null
+    context: "Пейзаж Антиба, Лазурный Берег, Франция"
+    signed: false
+    source_file: "Антиб3.jpg"
+    source_location: "/Volumes/OlgaWork/Мои рисунки/"
+    file_size_bytes: 3375072
+    tags: ["пейзаж", "акварель", "Антиб", "Франция"]
+    
+  - id: "007"
+    title: "Джулио Бертанья"
+    title_en: "Giulio Bertagna"
+    year: null
+    technique: "Акварель, бумага"
+    size: null
+    dimensions_px: null
+    location: null
+    context: "Портрет Джулио Бертанья, преподавателя Школы Дизайна в Сейлансе"
+    signed: false
+    source_file: "Джулио Бертанья.jpg"
+    source_location: "/Volumes/OlgaWork/Мои рисунки/"
+    file_size_bytes: 243969
+    tags: ["портрет", "акварель", "Франция"]
+    
+  - id: "008"
+    title: "Иван Стенин"
+    title_en: "Ivan Stenin"
+    year: null
+    technique: "Акварель, бумага"
+    size: null
+    dimensions_px: "1480×2166"
+    location: null
+    context: "Портрет Ивана Стенина"
+    signed: false
+    source_file: "Иван Стенин.jpg"
+    source_location: "/Volumes/OlgaWork/Мои рисунки/"
+    file_size_bytes: 395305
+    tags: ["портрет", "акварель"]
+    
+  - id: "009"
+    title: "Антиб Мал"
+    title_en: "Small Antibes"
+    year: null
+    technique: "Акварель, бумага"
+    size: null
+    dimensions_px: null
+    location: null
+    context: "Малый пейзаж Антиба, Лазурный Берег, Франция"
+    signed: false
+    source_file: "антиб мал.jpg"
+    source_location: "/Volumes/OlgaWork/Мои рисунки/"
+    file_size_bytes: 1034082
+    tags: ["пейзаж", "акварель", "Антиб", "Франция"]
+    
+  - id: "010"
+    title: "Антиб"
+    title_en: "Antibes"
+    year: null
+    technique: "Акварель, бумага"
+    size: null
+    dimensions_px: "4263×3212"
+    location: null
+    context: "Пейзаж Антиба, Лазурный Берег, Франция"
+    signed: true
+    signature: "Розет.О."
+    source_file: "антиб.jpg"
+    source_location: "/Volumes/OlgaWork/Мои рисунки/"
+    file_size_bytes: 2068496
+    tags: ["пейзаж", "акварель", "Антиб", "Франция", "подпись"]
+    
+  - id: "011"
+    title: "Прованс"
+    title_en: "Provence"
+    year: null
+    technique: "Акварель, бумага"
+    size: null
+    dimensions_px: null
+    location: null
+    context: "Пейзаж Прованса, Франция"
+    signed: false
+    source_file: "прованс.jpg"
+    source_location: "/Volumes/OlgaWork/Мои рисунки/"
+    file_size_bytes: 850790
+    tags: ["пейзаж", "акварель", "Прованс", "Франция"]
+    
+  - id: "012"
+    title: "Прованс1"
+    title_en: "Provence 1"
+    year: null
+    technique: "Акварель, бумага"
+    size: null
+    dimensions_px: null
+    location: null
+    context: "Пейзаж Прованса, Франция"
+    signed: false
+    source_file: "прованс1.jpg"
+    source_location: "/Volumes/OlgaWork/Мои рисунки/"
+    file_size_bytes: 1317202
+    tags: ["пейзаж", "акварель", "Прованс", "Франция"]
+    
+  - id: "013"
+    title: "Конспект"
+    title_en: "Sketch"
+    year: null
+    technique: "Карандаш, бумага"
+    size: null
+    dimensions_px: "2379×1512"
+    location: null
+    context: "Набросок"
+    signed: false
+    source_file: "конспект.jpg"
+    source_location: "/Volumes/OlgaWork/Мои рисунки/"
+    file_size_bytes: 616204
+    tags: ["набросок", "карандаш"]
+    
+  - id: "014"
+    title: "Сутин"
+    title_en: "Soutine"
+    year: null
+    technique: "Коллаж"
+    size: null
+    dimensions_px: null
+    location: null
+    context: "Коллаж по мотивам Хаима Сутина"
+    signed: false
+    source_file: "сутин.jpg"
+    source_location: "/Volumes/OlgaWork/мои коллажи/"
+    file_size_bytes: null
+    tags: ["коллаж", "Сутин"]
+    
+  - id: "015"
+    title: "IMG 2885"
+    title_en: "IMG 2885"
+    year: null
+    technique: null  # требуется уточнение
+    size: null
+    dimensions_px: null
+    location: null
+    context: null  # требуется уточнение
+    signed: false
+    source_file: "IMG_2885.JPG"
+    source_location: "/Volumes/OlgaWork/Мои рисунки/"
+    file_size_bytes: null
+    tags: []
+    notes: "Требуется идентификация и атрибуция"
+    
+  - id: "016"
+    title: "IMG 2886"
+    title_en: "IMG 2886"
+    year: null
+    technique: null  # требуется уточнение
+    size: null
+    dimensions_px: null
+    location: null
+    context: null  # требуется уточнение
+    signed: false
+    source_file: "IMG_2886.JPG"
+    source_location: "/Volumes/OlgaWork/Мои рисунки/"
+    file_size_bytes: null
+    tags: []
+    notes: "Требуется идентификация и атрибуция"
+    
+  - id: "017"
+    title: "IMG 2887"
+    title_en: "IMG 2887"
+    year: null
+    technique: null  # требуется уточнение
+    size: null
+    dimensions_px: null
+    location: null
+    context: null  # требуется уточнение
+    signed: false
+    source_file: "IMG_2887.JPG"
+    source_location: "/Volumes/OlgaWork/Мои рисунки/"
+    file_size_bytes: null
+    tags: []
+    notes: "Требуется идентификация и атрибуция"
+
+# Дополнительные источники для проверки:
+additional_sources:
+  - location: "/Volumes/OlgaWork/хорошие рисунки/"
+    files: ["репин.png"]
+    status: "требуется проверка"
+    
+  - location: "/Volumes/OlgaWork/мои фото/"
+    files: ["множество JPG файлов"]
+    created: "2024-11-01"
+    status: "требуется проверка - возможно фото работ"
+    
+  - location: "Instagram @olga_rozet"
+    status: "требуется доступ и экспорт"
+    
+  - location: "Google Drive /My Drive/"
+    files: ["IMG_7592.JPG", "IMG_9187.JPG", "IMG_9150.JPG", "IMG_9151.JPG", "IMG_9145.JPG", "IMG_9186.JPG"]
+    status: "требуется проверка"
+
+# Метаинформация
+metadata:
+  artist: "Ольга Розет"
+  artist_en: "Olga Rozet"
+  total_works: 17
+  works_with_year: 2
+  works_with_signature: 1
+  works_requiring_attribution: 3  # work-015, 016, 017
+  last_updated: "2025-11-19"
+  curator: "Азария Розет + Claude"
+
