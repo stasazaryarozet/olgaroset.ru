@@ -2,8 +2,8 @@
 // Интеграция с Google Sheets
 
 const CONFIG = {
-  SHEET_ID: '1V63W-BMWKqM9M4IabRJch4rdCVNL3DMGBugDzOxdeTQ',
-  SHEET_NAME: 'ЦДЛ 2 декабря',
+  SHEET_ID: '1IxI8mbFUmlFUmDPTROCPESfTSaF056JUHiAA6EgHB6A', // Согласовано с sync_seats.py
+  SHEET_NAME: 'ЦДЛ 2 декабря — Регистрации', // Согласовано с sync_seats.py
   CELL_RANGE: 'G2',
   TOTAL_SEATS: 25,
   UPDATE_INTERVAL: 30000
