@@ -217,6 +217,15 @@
     </main>
     
     <script>
+        // Shuffle gallery on load
+        const gallery = document.querySelector('.gallery');
+        const artworks = [...gallery.children];
+        for (let i = artworks.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            gallery.appendChild(artworks[j]);
+            artworks.splice(j, 1, artworks[i]);
+        }
+        
         // Scroll progress
         const progress = document.getElementById('progress');
         window.addEventListener('scroll', () => {
