@@ -1,217 +1,172 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="description" content="Ольга Розет — художник, искусствовед">
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-  <meta http-equiv="Pragma" content="no-cache">
-  <meta http-equiv="Expires" content="0">
+  <meta name="theme-color" content="#ffffff">
   <title>Ольга Розет</title>
   <style>
-    :root {
-      --text: #1a1a1a;
-      --bg: #fff;
-      --link: #000;
-      --border: #e0e0e0;
-      --focus: #0066cc
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box
-    }
-
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
     html {
-      font: 400 18px/1.7 -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+      font: 400 18px/1.7 -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
       -webkit-text-size-adjust: 100%;
-      -webkit-font-smoothing: antialiased
+      -webkit-font-smoothing: antialiased;
+      scroll-behavior: smooth;
     }
-
+    
     body {
-      color: var(--text);
-      background: var(--bg);
-      max-width: 38em;
+      color: #1a1a1a;
+      background: #fff;
+      max-width: 36em;
       margin: 0 auto;
-      padding: 4em 1.5em 2em;
+      padding: 4em 1.5em 3em;
       min-height: 100vh;
-      display: flex;
-      flex-direction: column
+      min-height: 100dvh;
     }
-
-    main {
-      flex: 1
-    }
-
+    
     h1 {
-      font-size: 1.8em;
+      font-size: 1.6em;
       font-weight: 400;
-      margin-bottom: 0.2em;
-      letter-spacing: -0.01em
+      margin-bottom: 1.5em;
+      letter-spacing: -0.01em;
     }
-
-    h2 {
-      font-size: 1.1em;
-      font-weight: 500;
-      margin: 3em 0 1em;
+    
+    section {
+      margin: 2.5em 0;
       padding-top: 2em;
-      border-top: 1px solid var(--border)
+      border-top: 1px solid #eee;
     }
-
-    p {
-      margin: 0.8em 0
+    
+    section:first-of-type {
+      border-top: none;
+      padding-top: 0;
+      margin-top: 0;
     }
-
+    
+    h2 {
+      font-size: 1em;
+      font-weight: 500;
+      margin-bottom: 0.8em;
+      color: #666;
+    }
+    
+    p { margin: 0.6em 0; }
+    
     a {
-      color: var(--link);
+      color: inherit;
       text-decoration: none;
-      border-bottom: 1px solid currentColor;
-      transition: opacity .15s
+      border-bottom: 1px solid #ccc;
+      transition: border-color 0.2s;
     }
-
-    a:hover {
-      opacity: 0.6
+    
+    a:hover { border-color: #000; }
+    
+    .price {
+      font-size: 0.9em;
+      color: #666;
     }
-
-    a:focus-visible {
-      outline: 2px solid var(--focus);
-      outline-offset: 2px
+    
+    .cta {
+      display: inline-block;
+      margin-top: 0.5em;
+      padding: 0.6em 1.2em;
+      background: #1a1a1a;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      transition: opacity 0.2s;
     }
-
-    strong {
-      font-weight: 500
+    
+    .cta:hover { opacity: 0.8; border: none; }
+    
+    .event {
+      margin: 1.5em 0;
     }
-
+    
+    .event-date {
+      font-weight: 500;
+    }
+    
+    .event-details {
+      font-size: 0.95em;
+      color: #666;
+      margin-top: 0.3em;
+    }
+    
+    .help {
+      background: #fafafa;
+      padding: 1.5em;
+      border-radius: 8px;
+      margin-top: 1em;
+    }
+    
+    .help p {
+      font-size: 0.95em;
+      color: #666;
+    }
+    
     footer {
       margin-top: 4em;
       padding-top: 2em;
-      border-top: 1px solid var(--border);
-      font-size: 0.9em;
-      color: #666
+      border-top: 1px solid #eee;
+      font-size: 0.85em;
+      color: #999;
     }
-
-    footer a {
-      color: #666;
-      border-bottom-color: #ccc
+    
+    footer a { color: #999; }
+    
+    @media (max-width: 600px) {
+      html { font-size: 17px; }
+      body { padding: 3em 1.2em 2em; }
     }
-
-    .wiki-ref {
-      color: #0645ad;
-      text-decoration: none
-    }
-
-    .wiki-ref:hover {
-      text-decoration: underline
-    }
-
-    .footnote {
-      font-size: 0.9em;
-      color: #666;
-      margin-top: 2em;
-      padding-top: 1em;
-      border-top: 1px solid var(--border)
-    }
-
-    .footnote sup {
-      margin-right: 0.5em
-    }
-
-    @media(prefers-reduced-motion:reduce) {
-      * {
-        animation: none !important
-      }
-    }
-
-    @media(max-width:600px) {
-      html {
-        font-size: 17px
-      }
-
-      body {
-        padding: 3em 1.2em 2em
-      }
+    
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
     }
   </style>
 </head>
-
 <body>
-  <main>
-    <h1>Ольга Розет</h1>
-    <p>
-      <a href="art/">Художник</a>.
-    </p>
-    <p>
-      Проектировщик = Дизайнер.
-    </p>
-    <p>
-      Куратор Британской Международной Школы Дизайна<sup><a
-          href="https://ru.wikipedia.org/wiki/Британская_высшая_школа_дизайна" class="wiki-ref">[2]</a></sup>.
-    </p>
-    <p>
-      Ученик, Учитель.
-    </p>
-    <p>
-      Вдохновляю за деньги и без.
-    </p>
+  <h1>Ольга Розет</h1>
+  
+  <section>
+    <p><a href="art/">Художник</a>.</p>
+    <p>Проектировщик. Дизайнер.</p>
+    <p>Ученик. Учитель.</p>
+    <p>Вдохновляю — за деньги и без.</p>
+  </section>
+  
+  <section>
     <h2>Консультации</h2>
-    <p>
-      40 минут. Подключить меня к вашему делу.
-    </p>
-    <p>
-      15 000 ₽
-    </p>
-    <p>
-      <a href="https://cal.com/olgarozet/delo-40min">В Дело</a>
-    </p>
-    <hr>
+    <p>40 минут. Подключить меня к вашему делу.</p>
+    <p class="price">15 000 ₽ · онлайн</p>
+    <a href="https://cal.com/olgarozet/delo-40min" class="cta">Записаться</a>
+  </section>
+  
+  <section>
     <h2>Ближайшее</h2>
-    <p>
-      <strong>2 декабря, понедельник</strong>
-      <br>
-      <strong>12:00</strong>
-      <br>
-      Москва, Центральный дом литераторов<sup><a href="https://ru.wikipedia.org/wiki/Центральный_дом_литераторов"
-          class="wiki-ref">[1]</a></sup>
-      <br>
-      5 000 ₽
-      <br>
-      <a href="https://olgarozet.ru/chl/">olgarozet.ru/chl/</a>
-    </p>
-    <p>
-      <strong>15–18+ января</strong>
-      <br>
-      Париж
-      <br>
-      1550 €
-      <br>
-      <a href="https://parisinjanuary.ru">parisinjanuary.ru</a>
-    </p>
-    <hr>
-    <h2>Нет достаточно денег?</h2>
-    <p>
-      Возможно, что-нибудь придумаем. Пожалуйста, пишите.
-    </p>
-    <p>
-      Напишите письмо на <a href="mailto:o.g.rozet@gmail.com?subject=Субсидия">o.g.rozet@gmail.com</a> с темой
-      <strong>"Субсидия"</strong>.
-      <br>
-      В письме изложите ситуацию в самых общих чертах.
-    </p>
-    <hr>
-    <h2 style="font-size:1.3em;font-weight:400;margin-bottom:0.5em">Нужна помощь?</h2>
-    <p style="color:#666;margin-bottom:1.5em">Нет денег? Возможно, что-нибудь придумаем. Пожалуйста, пишите.</p>
-
-    <p style="color:#666;font-size:0.95em;line-height:1.6;max-width:32em">
-      Напишите письмо на <a href="mailto:o.g.rozet@gmail.com?subject=Субсидия">o.g.rozet@gmail.com</a> с темой
-      <strong>"Субсидия"</strong>.<br>
-      В письме изложите ситуацию в самых общих чертах.<br>
-      Или Telegram: <a href="https://t.me/Rozet">ORozet</a>
-    </p>
-  </main>
-  <div id="footer"></div>
-  <script src="footer.js?v=1765038492"></script>
+    <div class="event">
+      <p class="event-date">15–18+ января 2026</p>
+      <p>Париж. Путешествие с Ольгой Розет.</p>
+      <p class="event-details">1550 € · <a href="https://parisinjanuary.ru">parisinjanuary.ru</a></p>
+    </div>
+  </section>
+  
+  <section>
+    <h2>Нужна помощь?</h2>
+    <div class="help">
+      <p>Нет достаточно денег? Возможно, что-нибудь придумаем.</p>
+      <p style="margin-top: 1em;">
+        <a href="mailto:o.g.rozet@gmail.com?subject=Субсидия">o.g.rozet@gmail.com</a> · тема «Субсидия»
+        <br>
+        <a href="https://t.me/olgaroset">@olgaroset</a>
+      </p>
+    </div>
+  </section>
+  
+  <footer>
+    <a href="https://t.me/olga_rozet">Telegram-канал</a>
+  </footer>
 </body>
-
 </html>
